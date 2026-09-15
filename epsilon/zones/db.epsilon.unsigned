@@ -1,0 +1,13 @@
+$TTL 86400
+
+@ IN SOA ns.epsilon.unsigned. admin.epsilon.unsigned. (
+    2026090801
+    3600
+    900
+    604800
+    86400
+)
+
+@                    IN NS ns.epsilon.unsigned.
+ns.epsilon.unsigned. IN A 172.30.0.32
+www                  IN A 172.30.0.32

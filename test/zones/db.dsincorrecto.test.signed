@@ -1,0 +1,82 @@
+; File written on Wed Sep  9 23:08:41 2026
+; dnssec-signzone version 9.20.27-1-Debian
+dsincorrecto.test.	3600	IN SOA	ns.dsincorrecto.test. admin.dsincorrecto.test. (
+					2026091002 ; serial
+					3600       ; refresh (1 hour)
+					900        ; retry (15 minutes)
+					604800     ; expire (1 week)
+					86400      ; minimum (1 day)
+					)
+			3600	RRSIG	SOA 13 2 3600 (
+					20261010020841 20260910020841 9419 dsincorrecto.test.
+					grcQ23vgsG+o3N0/eOlaclCWKmo3OHzJhLFl
+					QQsk3zCyeMUKKOavkj+xWn0H6AXbYaN12iNF
+					H23uYkH0owDA0g== )
+			3600	NS	ns.dsincorrecto.test.
+			3600	RRSIG	NS 13 2 3600 (
+					20261010020841 20260910020841 9419 dsincorrecto.test.
+					CXbEXw+XQj1ezvDsXE1adSchejX1+5Vsm1r5
+					kveGjezDqk+PfjoDUBp3K22dKdax8hCkGhrK
+					F4yAWFdkvO21EA== )
+			3600	DNSKEY	256 3 13 (
+					LVSEHytVbUYGakslzCfTUDDTF1i7rMvbZF41
+					c1jXM7gjWDeza0ePAli1J7vV5Mj+jjEDpHLF
+					A9CwjIUR+v1B4Q==
+					) ; ZSK; alg = ECDSAP256SHA256 ; key id = 9419
+			3600	DNSKEY	257 3 13 (
+					N9SUdJebZ2nbbcbCXcsff0199jvnLKI+50JX
+					UZEvws1SH1nEVtS+gps1+WrDhP+LECqmcbM2
+					aUPMa4Pl1SFo0w==
+					) ; KSK; alg = ECDSAP256SHA256 ; key id = 51413
+			3600	RRSIG	DNSKEY 13 2 3600 (
+					20261010020841 20260910020841 9419 dsincorrecto.test.
+					SR0qwJshbC+YBWCxsbFZVCVGmMJEyihIyO2r
+					dp65oeCCyX+DR0lErpULbHEjw+0SyneasCph
+					G7muhDFLxBqIZA== )
+			3600	RRSIG	DNSKEY 13 2 3600 (
+					20261010020841 20260910020841 51413 dsincorrecto.test.
+					vByVVvngq3ijL7vLA83Qyknv6fVM6P2vGuqW
+					xFmlvcpF0rnXbuvZZA4bWt7V47zWBBGZJDOx
+					RPfGu+r5sdRB/A== )
+			0	NSEC3PARAM 1 0 0 -
+			0	RRSIG	NSEC3PARAM 13 2 0 (
+					20261010020841 20260910020841 9419 dsincorrecto.test.
+					qZ4Tht6b4417h/tr6PxiAaiw26huuvYIYcs2
+					f70AEtn9FZ/71p7Htn/O0MlPHFslBGnF+Es+
+					QLSsGeOApByczQ== )
+ns.dsincorrecto.test.	3600	IN A	172.30.0.70
+			3600	RRSIG	A 13 3 3600 (
+					20261010020841 20260910020841 9419 dsincorrecto.test.
+					FM1+uXtDKrjizwUMEv6SLBlkjc3TW+QqJ8RU
+					iREMZqwTYeyfHqpGLf+Ds3yAplNoVrXr2Uiv
+					lGcXAM1QDfs/EA== )
+www.dsincorrecto.test.	3600	IN A	172.30.0.70
+			3600	RRSIG	A 13 3 3600 (
+					20261010020841 20260910020841 9419 dsincorrecto.test.
+					WcOMjZi2odQJIqoBmQ5EDTvVrV7CbTwwLHxj
+					02Ly7ms+dEmJGPSvCIkoskZlJDECJ4eXLemY
+					lXr2syPkdVfFZw== )
+0JNQADCV1SERJFU9FT36G8ECV1M6JOB4.dsincorrecto.test. 3600 IN NSEC3 1 0 0 - (
+					527BV7SQ3MEVSB39ABMIT0BQF9I0JTCK
+					A RRSIG )
+			3600	RRSIG	NSEC3 13 3 3600 (
+					20261010020841 20260910020841 9419 dsincorrecto.test.
+					H/4oCivGQkm2CyO3oyTk24WrKLpL8uHafJiJ
+					1dlcJpB1o89ehGHn3TRHI18UW9es+3dN4n0O
+					fn5dIKF1svjP0g== )
+527BV7SQ3MEVSB39ABMIT0BQF9I0JTCK.dsincorrecto.test. 3600 IN NSEC3 1 0 0 - (
+					IC9PFLBKR7B4CGLBUGB6VUAEDNFJ687K
+					NS SOA RRSIG DNSKEY NSEC3PARAM )
+			3600	RRSIG	NSEC3 13 3 3600 (
+					20261010020841 20260910020841 9419 dsincorrecto.test.
+					noHOoKcAJ+uWcL/gF6t3vxmUQZurbAr1KZW3
+					uYf1M3OmCNMjP12VzMkmlu5AW6uL91jdAQ8X
+					sos3w0ciX0bs+A== )
+IC9PFLBKR7B4CGLBUGB6VUAEDNFJ687K.dsincorrecto.test. 3600 IN NSEC3 1 0 0 - (
+					0JNQADCV1SERJFU9FT36G8ECV1M6JOB4
+					A RRSIG )
+			3600	RRSIG	NSEC3 13 3 3600 (
+					20261010020841 20260910020841 9419 dsincorrecto.test.
+					wfnjx2i4quxqf3VGC3x/N9cnpEry7vXplkZA
+					Ik/BxH1o6P5AlRssnJKgdn3/KPPd0kXxgaW1
+					cOT/Y8EA0VgOxQ== )

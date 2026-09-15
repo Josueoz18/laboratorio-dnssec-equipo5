@@ -1,0 +1,70 @@
+; File written on Tue Sep  8 16:39:03 2026
+; dnssec-signzone version 9.20.27-1-Debian
+theta.signed.		86400	IN SOA	ns.theta.signed. admin.theta.signed. (
+					2026090801 ; serial
+					3600       ; refresh (1 hour)
+					900        ; retry (15 minutes)
+					604800     ; expire (1 week)
+					86400      ; minimum (1 day)
+					)
+			86400	RRSIG	SOA 13 2 86400 (
+					20261008213903 20260908213903 2442 theta.signed.
+					PslEj+c2c/uHlrIjNqakTpEvN7RJcUZtLxx8
+					qN2j5WPOcoFju7Uyepcwjqab91lr45A7skGW
+					FVwBE+/L9okTNg== )
+			86400	NS	ns.theta.signed.
+			86400	RRSIG	NS 13 2 86400 (
+					20261008213903 20260908213903 2442 theta.signed.
+					ZHF6M5tdDf11VvB+QLMLDDoip7pAlL7QOeaI
+					5+jceHq1uoPqyBhkhhL8zKCJ3wousOxVZYgz
+					ayn61BWBhHdF/A== )
+			86400	NSEC	ns.theta.signed. NS SOA RRSIG NSEC DNSKEY
+			86400	RRSIG	NSEC 13 2 86400 (
+					20261008213903 20260908213903 2442 theta.signed.
+					KxT6GZiOtqrqO1h78/qFCcyIixvik4nKsG93
+					A0CzQHYuHlyoPRyOxAq5MdNEowkTRI5BRxba
+					rs9TzMqKR1/T8Q== )
+			86400	DNSKEY	256 3 13 (
+					WEiNAY4j9YSJRnW+pb4khPUXsDKPc6F6bTWm
+					erkpD/bDEJKDaYLo2igLa9WZVXDfXP0PN4vY
+					YFyz/YO/Q3IGmg==
+					) ; ZSK; alg = ECDSAP256SHA256 ; key id = 2442
+			86400	DNSKEY	257 3 13 (
+					2jWLzVyrGlgli+upRDSJPIklADbHghU6k3R8
+					h0h7hPHrFuK7c9SxzwqpyLfVv4TtTOxDVDxB
+					3lvcjXPrutZnhQ==
+					) ; KSK; alg = ECDSAP256SHA256 ; key id = 17012
+			86400	RRSIG	DNSKEY 13 2 86400 (
+					20261008213903 20260908213903 2442 theta.signed.
+					yBNbIX2f/5/ga6DgkhkOUYEvi8yvAIoD1SUX
+					kASYRTYoNHLHXxeP3rFi4sYCrBRDCxLaXRqv
+					NZ53LV/OSK0UiQ== )
+			86400	RRSIG	DNSKEY 13 2 86400 (
+					20261008213903 20260908213903 17012 theta.signed.
+					cXmGwXYRlUBpx7nCLtb2SGE7I/JniFo6m6ru
+					HDds6gNuCyNAXH+diFJd+uydOJsld9yi/Yrz
+					rytPx16NJlYNSw== )
+ns.theta.signed.	86400	IN A	172.30.0.52
+			86400	RRSIG	A 13 3 86400 (
+					20261008213903 20260908213903 2442 theta.signed.
+					8mBM92hieEktyfvRe+WafvdYmsDIsI8Y4bIw
+					IKfI/e2dk+7917sgqlLoKDu8ZzVzMOZN6pvN
+					w1cUjA6bxckp8Q== )
+			86400	NSEC	www.theta.signed. A RRSIG NSEC
+			86400	RRSIG	NSEC 13 3 86400 (
+					20261008213903 20260908213903 2442 theta.signed.
+					lEHPrJccg5wShcZtFkqUFZuJ90qOYUstMQBT
+					nMJpHaCk+xok33a33HgYfwGtuf0s9PEcgpyi
+					sX9stDvYgmU0pA== )
+www.theta.signed.	86400	IN A	172.30.0.52
+			86400	RRSIG	A 13 3 86400 (
+					20261008213903 20260908213903 2442 theta.signed.
+					IsoLUR6vEEeZBiIJ+kOMfGc2VAs+r8wKTYIk
+					xrxB8aPmWH8G5ZRMKVc+EhE+rziWfcQsgEI7
+					o9fnO53GUGqEaw== )
+			86400	NSEC	theta.signed. A RRSIG NSEC
+			86400	RRSIG	NSEC 13 3 86400 (
+					20261008213903 20260908213903 2442 theta.signed.
+					jgbgVLxdC6h/Y4a5ia1sSmIdSZ3Yv5B4y1Fy
+					UxNqY8KyeFYy2AP4yk/r7XiYdF/zh9DqtrTL
+					GnFtNs8EYNLPpA== )

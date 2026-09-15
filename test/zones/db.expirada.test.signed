@@ -1,0 +1,70 @@
+; File written on Wed Sep  9 22:37:03 2026
+; dnssec-signzone version 9.20.27-1-Debian
+expirada.test.		3600	IN SOA	ns.expirada.test. admin.expirada.test. (
+					2026091002 ; serial
+					3600       ; refresh (1 hour)
+					900        ; retry (15 minutes)
+					604800     ; expire (1 week)
+					86400      ; minimum (1 day)
+					)
+			3600	RRSIG	SOA 13 2 3600 (
+					20260909120000 20260909000000 62225 expirada.test.
+					7EJLk2jecpB1s9AbgN4cMGBO2xrxKh1+llcN
+					h3LUiXkR9fNWd4l4+gB6Gzm4xGZgOiaClMsW
+					9bTrhbhKdtFzfw== )
+			3600	NS	ns.expirada.test.
+			3600	RRSIG	NS 13 2 3600 (
+					20260909120000 20260909000000 62225 expirada.test.
+					6bUWTZgFCKB/zw4JKzjglFSlfewAL4buh0wJ
+					mX+d8VgcnBpXIP8kcEF6qttjN0oIA6q9hEXw
+					sumly+UjOsXxgQ== )
+			3600	NSEC	ns.expirada.test. NS SOA RRSIG NSEC DNSKEY
+			3600	RRSIG	NSEC 13 2 3600 (
+					20260909120000 20260909000000 62225 expirada.test.
+					IddQ39uTo8nm30hRatlCFr4OJ7CnJz7rQdYt
+					i9KaWscvM3gtE6+5aFNl1A8LZTkeqCbsVVME
+					/K8GBRlkRpu8pg== )
+			3600	DNSKEY	256 3 13 (
+					Wseoh9fIQKhBo5e/pT34QsYXMOyv4u+/O4kg
+					zWnNUtYG0TOOa9aGiitCAltHYezP2T29TFQz
+					tHrxkaKsirtf/w==
+					) ; ZSK; alg = ECDSAP256SHA256 ; key id = 62225
+			3600	DNSKEY	257 3 13 (
+					ZJM7RYXen9w2fuNendlssviGTJX60hWbEt/n
+					B4cQynZVi79UlOdgjguarOfQXg5gg0xRaYH6
+					6YAY2sjUuUcR0A==
+					) ; KSK; alg = ECDSAP256SHA256 ; key id = 7570
+			3600	RRSIG	DNSKEY 13 2 3600 (
+					20260909120000 20260909000000 7570 expirada.test.
+					2ziIo38nRZwiQT4vJjExUTZxRU99fa2RNbn8
+					Bn1Df2dWY9Sc9O+LD7R3mj8DgLhfmsv6lIPT
+					noa2SvXgCRovKw== )
+			3600	RRSIG	DNSKEY 13 2 3600 (
+					20260909120000 20260909000000 62225 expirada.test.
+					tz4S+d7EvVOJ+0CQjVH4vyJb76HnAQzpFzXz
+					NKG21TukpmoNozj0+ZCjy3kHX385yxM7PhHd
+					zmPxfpvaSphvoA== )
+ns.expirada.test.	3600	IN A	172.30.0.70
+			3600	RRSIG	A 13 3 3600 (
+					20260909120000 20260909000000 62225 expirada.test.
+					ThaESBXySp2VfiJOMhKPTr3L1iAX7ptq4USz
+					AXz4QoU5rO2j7iwuAtj1X5B46SF42rd4lMEp
+					HzQiKHMrzpBbbw== )
+			3600	NSEC	www.expirada.test. A RRSIG NSEC
+			3600	RRSIG	NSEC 13 3 3600 (
+					20260909120000 20260909000000 62225 expirada.test.
+					Q1dBd8NJW0nmcwyPVP5gwp53z8EMx2gQE4/i
+					IlpnGPka+arXxn4+PxjzVlQwibLFqvbdd8Xp
+					y7Hn2jEaTToF0Q== )
+www.expirada.test.	3600	IN A	172.30.0.70
+			3600	RRSIG	A 13 3 3600 (
+					20260909120000 20260909000000 62225 expirada.test.
+					Owst7LXJRB7ID56bqY+pdhpWZ7ToOdBJAsUm
+					6uicPkpMfGWn5Gal3NTK5M/enA5fvKaZ7SGA
+					NOKGG99GgQD+/Q== )
+			3600	NSEC	expirada.test. A RRSIG NSEC
+			3600	RRSIG	NSEC 13 3 3600 (
+					20260909120000 20260909000000 62225 expirada.test.
+					Dk08FlzxTMB91UgsUNyoxoFW3EsQZqXZtLLf
+					rcG5BLxdsHfQx5xWNKFrw6kcbrsC4qG+9fa6
+					NI+LKyJCVxBRsg== )

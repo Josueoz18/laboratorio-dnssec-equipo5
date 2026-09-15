@@ -1,0 +1,41 @@
+$TTL 86400
+@   IN  SOA ns.signed. admin.signed. (
+        2026090802
+        3600
+        900
+        604800
+        86400
+)
+
+    IN  NS  ns.signed.
+
+ns  IN  A   172.30.0.40
+
+; Delegacion beta.signed
+beta.signed.      IN NS  ns.beta.signed.
+ns.beta.signed.   IN A   172.30.0.50
+
+; DS de beta.signed
+beta.signed.      IN DS  27278 13 2 8A17B119D315A01509A40F6E486B784EDF31B546EDBE840CFD04E9BB83873112
+
+; Delegacion gamma.signed
+gamma.signed.     IN NS  ns.gamma.signed.
+ns.gamma.signed.  IN A   172.30.0.60
+
+; Delegacion eta.signed
+eta.signed.       IN NS  ns.eta.signed.
+ns.eta.signed.    IN A   172.30.0.51
+
+; DS de eta.signed
+eta.signed.       IN DS  33719 13 2 AA9998A1463C017317A4BBFEB014DC56DEB6BC5B7B75A37ACF95F8E0E199721C
+
+; Delegacion theta.signed
+theta.signed.     IN NS  ns.theta.signed.
+ns.theta.signed.  IN A   172.30.0.52
+
+; DS de theta.signed
+theta.signed.     IN DS  17012 13 2 222E5AE522BFBB7F04BCA64170F79FE81643E24D3D223BE4D44AD46B2B91758B
+
+; Delegacion iota.signed
+iota.signed.      IN NS  ns.iota.signed.
+ns.iota.signed.   IN A   172.30.0.53

@@ -1,0 +1,13 @@
+$TTL 86400
+@   IN  SOA ns.iota.signed. admin.iota.signed. (
+        2026090801
+        3600
+        900
+        604800
+        86400
+)
+
+    IN  NS  ns.iota.signed.
+
+ns  IN  A   172.30.0.53
+www IN  A   172.30.0.53

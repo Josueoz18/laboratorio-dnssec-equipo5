@@ -1,0 +1,13 @@
+$TTL 86400
+
+@ IN SOA ns.delta.unsigned. admin.delta.unsigned. (
+    2026090801
+    3600
+    900
+    604800
+    86400
+)
+
+@                  IN NS ns.delta.unsigned.
+ns.delta.unsigned. IN A 172.30.0.31
+www                IN A 172.30.0.31

@@ -1,0 +1,25 @@
+$TTL 86400
+
+@ IN SOA ns.root. admin.root. (
+    2026090101
+    3600
+    900
+    604800
+    86400
+)
+
+@        IN NS ns.root.
+ns.root. IN A 172.30.0.10
+
+; =========================
+; TLD UNSIGNED
+; =========================
+unsigned.    IN NS ns.unsigned.
+ns.unsigned. IN A 172.30.0.20
+
+; =========================
+; TLD SIGNED
+; =========================
+signed.      IN NS  ns.signed.
+ns.signed.   IN A   172.30.0.40
+signed.      IN DS  24750 13 2 285AB97E0742A7D2FF59DED2AD627457BEF4FE4251ACBBE354A432BDB604E7EA

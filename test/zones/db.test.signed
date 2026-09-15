@@ -1,0 +1,110 @@
+; File written on Wed Sep  9 22:40:53 2026
+; dnssec-signzone version 9.20.27-1-Debian
+test.			3600	IN SOA	ns.test. admin.test. (
+					2026091003 ; serial
+					3600       ; refresh (1 hour)
+					1800       ; retry (30 minutes)
+					604800     ; expire (1 week)
+					86400      ; minimum (1 day)
+					)
+			3600	RRSIG	SOA 13 1 3600 (
+					20261010014053 20260910014053 45201 test.
+					GOxc7GagOCNva5PkR2TEWNSgKtkS+XXFcoks
+					EASpizcpFvljLt5+/q7J5ZG0JEaBMnYlkqH2
+					WP9QRT9O9Bbdow== )
+			3600	NS	ns.test.
+			3600	RRSIG	NS 13 1 3600 (
+					20261010014053 20260910014053 45201 test.
+					79U/DQdXY4iiw9xPNlrIlKKx52zrOd2VnhOk
+					9svH07sVcEDzkLo+/TZrpdFcBuIpMaHk0tEw
+					VxW1xlCaNfx6tQ== )
+			3600	NSEC	dsincorrecto.test. NS SOA RRSIG NSEC DNSKEY
+			3600	RRSIG	NSEC 13 1 3600 (
+					20261010014053 20260910014053 45201 test.
+					dYoQsQQvZSFZjAYXlcFlvFvMVzNVGqX30PQU
+					pwnR3OAEtpF8OZO5EEAQit245t8qT0RSkQCr
+					Jvv1k1o+QsYOFQ== )
+			3600	DNSKEY	256 3 13 (
+					EFwLuXkSAH2AFStHHKC9BUL6/u6SH/OgtVGS
+					KhawWwMpP39Kso2v4FGRqWiN8jPz4r+z8uGN
+					p3gqyM3RXb/TGQ==
+					) ; ZSK; alg = ECDSAP256SHA256 ; key id = 45201
+			3600	DNSKEY	257 3 13 (
+					C53odd/PFSq1zNKdrxGp5kMfGmkQsLLZ06jR
+					yjj6ZsGR9MEKbq2we3QV4adO4jNmcQQKnh/I
+					/CL3iqUFYaL0GQ==
+					) ; KSK; alg = ECDSAP256SHA256 ; key id = 2248
+			3600	RRSIG	DNSKEY 13 1 3600 (
+					20261010014053 20260910014053 2248 test.
+					w7i4oBYIvTgOwNJo6mf80wwmxKOqqgBI1lKy
+					SiMJ5Zrdqc8z2x7kRKhDI26XgnjPG/j7vkTl
+					VtXNBrCUi6A33w== )
+			3600	RRSIG	DNSKEY 13 1 3600 (
+					20261010014053 20260910014053 45201 test.
+					zA/MEh/qVYtoz7VzB8+TMqBLzE30d4qUsq/s
+					t3Y4gjTKryWt1JyUSBG950S4L07zSR46s8Jo
+					qdqQESGQ3uOrzA== )
+dsincorrecto.test.	3600	IN NS	ns.dsincorrecto.test.
+			3600	DS	32470 13 2 (
+					AAFAF4182B0A42FDD5BB0E3499FD32A2FE08
+					1AD4102B0110E33302A56B968308 )
+			3600	RRSIG	DS 13 2 3600 (
+					20261010014053 20260910014053 45201 test.
+					Cj5v6sE1jj6nmruqJIXGLpmp7u/dP7MzY5G/
+					qWhD58lLVFEUhSK+ie0UDdfXOU8C91tHQSXP
+					vlfjtkmSTpvYUQ== )
+			3600	NSEC	expirada.test. NS DS RRSIG NSEC
+			3600	RRSIG	NSEC 13 2 3600 (
+					20261010014053 20260910014053 45201 test.
+					dkH7U+3iys/aJYMC9L5T+Wd7Htpa5BvHzObp
+					o3YhUM37WV8DTaLhoBnzo2aeAMN4rQwUxgqV
+					hzL7+P+x6d9/Xw== )
+ns.dsincorrecto.test.	3600	IN A	172.30.0.70
+expirada.test.		3600	IN NS	ns.expirada.test.
+			3600	DS	7570 13 2 (
+					87C2DA01A54859B49BA98C78440AA2780440
+					8B18CACD6D8BD74B3D0DC69DD83C )
+			3600	RRSIG	DS 13 2 3600 (
+					20261010014053 20260910014053 45201 test.
+					o04g08nMT3MeMPmH3fAmk/XdtaeFmh646ElQ
+					oLO1f3wPQYTycpNfrDL0rlJLgHUlQoaghIwB
+					e2W5jALZW+d97g== )
+			3600	NSEC	ns.test. NS DS RRSIG NSEC
+			3600	RRSIG	NSEC 13 2 3600 (
+					20261010014053 20260910014053 45201 test.
+					QZrAczTiVnXbEGpjrF5/+f1QyczlskG+p/ar
+					jTcd37VnNyqARwuGBkwjz4NU1DbmTJYmNwr6
+					wn5RJImELB0Yuw== )
+ns.expirada.test.	3600	IN A	172.30.0.70
+ns.test.		3600	IN A	172.30.0.70
+			3600	RRSIG	A 13 2 3600 (
+					20261010014053 20260910014053 45201 test.
+					KX+awd/4IPIdcJ9GRZUq19j2jQpUsKO4jZd9
+					NfzeHDmhFccOcf+iu8xxEHqrm81GCiIFje+Q
+					iYKJDqSx50pNag== )
+			3600	NSEC	sinds.test. A RRSIG NSEC
+			3600	RRSIG	NSEC 13 2 3600 (
+					20261010014053 20260910014053 45201 test.
+					ApGuUo3HjSIYfxkl57qz3oUd0+c0UGRQaSt7
+					BLeW6p2OmKC4zmt6VefwPr7VOUfOW5IiE4WL
+					C2k1nrU6N2rJYw== )
+sinds.test.		3600	IN NS	ns.sinds.test.
+			3600	NSEC	www.test. NS RRSIG NSEC
+			3600	RRSIG	NSEC 13 2 3600 (
+					20261010014053 20260910014053 45201 test.
+					4SO40yBvQ6khnJ+T96Lyy1rZdFyAvOd8zRXv
+					FS4jdMBcGnxXRr5bcrzBdvBuAtozqCpdWg1m
+					TN0W+wdRPPHHBQ== )
+ns.sinds.test.		3600	IN A	172.30.0.70
+www.test.		3600	IN A	172.30.0.70
+			3600	RRSIG	A 13 2 3600 (
+					20261010014053 20260910014053 45201 test.
+					Q4Zav68p4fi1O4UvMbUhvXedUWaQKKMjTVTJ
+					LP4lNEnChm79S51dVc75YCB1Dxvqulzi9L2N
+					FLWXfK6fB/7N/g== )
+			3600	NSEC	test. A RRSIG NSEC
+			3600	RRSIG	NSEC 13 2 3600 (
+					20261010014053 20260910014053 45201 test.
+					X8j4saGQcTGxHDdljJjLXAU0DGzsrdWYmhHC
+					O5Lo/qYnv2rWAEsWmVb6IYocYx5OSHB49Dqh
+					vta3Mk2IumJ1+w== )

@@ -1,0 +1,70 @@
+; File written on Tue Sep  8 16:38:37 2026
+; dnssec-signzone version 9.20.27-1-Debian
+eta.signed.		86400	IN SOA	ns.eta.signed. admin.eta.signed. (
+					2026090801 ; serial
+					3600       ; refresh (1 hour)
+					900        ; retry (15 minutes)
+					604800     ; expire (1 week)
+					86400      ; minimum (1 day)
+					)
+			86400	RRSIG	SOA 13 2 86400 (
+					20261008213837 20260908213837 42923 eta.signed.
+					wLdjyXZ+Fjyvy4AkpM1G/nqSuq5RqVgAEgSK
+					hvPpmBaP9cSGcQkYuoyK7n6dXXD7Wwy7OdC9
+					X2aRd13WJQK0UQ== )
+			86400	NS	ns.eta.signed.
+			86400	RRSIG	NS 13 2 86400 (
+					20261008213837 20260908213837 42923 eta.signed.
+					5JNo6Ed02G9VNSsEFnPaN7ax+dWWUJrYBXQF
+					haD/rPgP0C6bNcU3t+Ym61FHm1MmG0zirl/R
+					1CE8OYqWXTRHSQ== )
+			86400	NSEC	ns.eta.signed. NS SOA RRSIG NSEC DNSKEY
+			86400	RRSIG	NSEC 13 2 86400 (
+					20261008213837 20260908213837 42923 eta.signed.
+					Yaf2c/OqfpxfEAZKiV7O6HUJ5MXnv93Z5IS3
+					day7Bko3xjTvNF4BWWIWKGVXgKfvRGwp6Lnf
+					LXmgM7N5Qmfgkw== )
+			86400	DNSKEY	256 3 13 (
+					Pz3eKPnNdDbh9EEDagdbxJRdCgSuJAyAZ/Hk
+					e4SRoaH8lJOnKXa2jGplsl0woLqLeQAt+IaC
+					q1Bi8dfxqBEv2g==
+					) ; ZSK; alg = ECDSAP256SHA256 ; key id = 42923
+			86400	DNSKEY	257 3 13 (
+					cRimxLuf7mg85f/o2DBa6wDhZ1PQ6jynQu1e
+					bK9CiBpm0rL3L8qidhp4ozhXOtxE3vwfVphp
+					C87SP2CJX43tPw==
+					) ; KSK; alg = ECDSAP256SHA256 ; key id = 33719
+			86400	RRSIG	DNSKEY 13 2 86400 (
+					20261008213837 20260908213837 33719 eta.signed.
+					QwoevL1G1ec+O/k4OKwXNyyjQP1kRHL1rG5p
+					qOOrlVaenUHyl3aIMuhP2PLD23Ad4Ysja/Fq
+					QHReLYMUt50T/A== )
+			86400	RRSIG	DNSKEY 13 2 86400 (
+					20261008213837 20260908213837 42923 eta.signed.
+					cEl/yTfATUI5C9XNuWqZGgR/eJXlgn1W3+9l
+					CRAbUCS9+8mk5sieMDMHcZ8mnb2Gq0jpxaO0
+					0FdfNjz/8GdvMA== )
+ns.eta.signed.		86400	IN A	172.30.0.51
+			86400	RRSIG	A 13 3 86400 (
+					20261008213837 20260908213837 42923 eta.signed.
+					anOoYN/5puL/bL85ABIxvQa2VnJbux2GKSZu
+					4Uy5dmkJW3tHqynplXN8Uxl07O8pXYkw78Mw
+					FbPNweT5nysr2A== )
+			86400	NSEC	www.eta.signed. A RRSIG NSEC
+			86400	RRSIG	NSEC 13 3 86400 (
+					20261008213837 20260908213837 42923 eta.signed.
+					fcQaoHIg87OVBnSZI+9G+qtEthFkrWc7n9pA
+					o15pdZVAKwmu0GlT0gTVNIudJnROoer7o38c
+					Jzzsc1zgE+mTRw== )
+www.eta.signed.		86400	IN A	172.30.0.51
+			86400	RRSIG	A 13 3 86400 (
+					20261008213837 20260908213837 42923 eta.signed.
+					bkTMOyrbaVt2n3ilHUhBu574mGTj4P9twV4p
+					drcNs++HDpcBBX3DASEwg+l9DlyEHIhLmpaD
+					duhw1Y+1QkU6hg== )
+			86400	NSEC	eta.signed. A RRSIG NSEC
+			86400	RRSIG	NSEC 13 3 86400 (
+					20261008213837 20260908213837 42923 eta.signed.
+					8Ye8fmFr3cVbhmS5OSQoFSK9rKgK4TG0lJ4X
+					/G4Wke85wLgGO6H0lCp+CcxSymVQpleHtaM3
+					Rd3eo32p1BndGg== )

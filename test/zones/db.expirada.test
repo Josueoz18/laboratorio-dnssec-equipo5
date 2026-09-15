@@ -1,0 +1,14 @@
+$TTL 3600
+@   IN SOA ns.expirada.test. admin.expirada.test. (
+        2026091001
+        3600
+        900
+        604800
+        86400
+)
+    IN NS ns.expirada.test.
+ns  IN A 172.30.0.70
+www IN A 172.30.0.70
+
+$INCLUDE "Kexpirada.test.+013+07570.key"
+$INCLUDE "Kexpirada.test.+013+62225.key"

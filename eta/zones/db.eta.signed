@@ -1,0 +1,13 @@
+$TTL 86400
+@   IN  SOA ns.eta.signed. admin.eta.signed. (
+        2026090801
+        3600
+        900
+        604800
+        86400
+)
+
+    IN  NS  ns.eta.signed.
+
+ns  IN  A   172.30.0.51
+www IN  A   172.30.0.51

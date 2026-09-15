@@ -1,0 +1,70 @@
+; File written on Wed Sep  9 22:32:53 2026
+; dnssec-signzone version 9.20.27-1-Debian
+sinds.test.		3600	IN SOA	ns.sinds.test. admin.sinds.test. (
+					2026091002 ; serial
+					3600       ; refresh (1 hour)
+					900        ; retry (15 minutes)
+					604800     ; expire (1 week)
+					86400      ; minimum (1 day)
+					)
+			3600	RRSIG	SOA 13 2 3600 (
+					20261010013253 20260910013253 46744 sinds.test.
+					L9PTtN2tCr2fpvIaiS1VuWAko26fFhuvK237
+					TXUkCeLvCKA5tPf9CNE/ouB5+jB2GvYevH+p
+					1vI0QZ7enrPqRQ== )
+			3600	NS	ns.sinds.test.
+			3600	RRSIG	NS 13 2 3600 (
+					20261010013253 20260910013253 46744 sinds.test.
+					F9oxIwZSvztonX5WnN37rd5wFD08XV5Jn0bB
+					WBp2WnUheCAx8j59sljPow5CJ2xzx88Za82F
+					pTHMelZXP89sBw== )
+			3600	NSEC	ns.sinds.test. NS SOA RRSIG NSEC DNSKEY
+			3600	RRSIG	NSEC 13 2 3600 (
+					20261010013253 20260910013253 46744 sinds.test.
+					z59nxyuwBmkpZAzUQCs179Jy3NiWLJv2eQgQ
+					uX6/8lnEuuMoFZwAzyh2GRwkq9Jym7YO7GcU
+					61O9035cSJo6qg== )
+			3600	DNSKEY	256 3 13 (
+					fwLD9i0vHxwSY8rh98VaLCLHzIHKrHT6xegg
+					cdImxeFmoyVCeREAwlNzpZzc2iNMxEAuhtH7
+					QsOjMnXWc/izRQ==
+					) ; ZSK; alg = ECDSAP256SHA256 ; key id = 46744
+			3600	DNSKEY	257 3 13 (
+					OYYuR0TCwXqaToidfaOmK3PuvsGCljQKGgAa
+					gmRK6+HzqrnFwRh59k9QUcaY0S8bNU3vYXRw
+					G0sO5Y4JnNMYUw==
+					) ; KSK; alg = ECDSAP256SHA256 ; key id = 32470
+			3600	RRSIG	DNSKEY 13 2 3600 (
+					20261010013253 20260910013253 32470 sinds.test.
+					P6516jT/fPM2YSMsVZbnDMUD8xUkb+a/lxNv
+					WCw/hjyKEMUPTirEcnSV9DYeN0uBKEq2SR+d
+					uPRZGs1UYLaiTQ== )
+			3600	RRSIG	DNSKEY 13 2 3600 (
+					20261010013253 20260910013253 46744 sinds.test.
+					XT96OAUkEe5SwxFZhH13qqx79ov0/E6mrFea
+					B6NvOo/FZm1RbJZVpRLPsp0QW8+1EQDc16IT
+					w/g69e+qjwge9g== )
+ns.sinds.test.		3600	IN A	172.30.0.70
+			3600	RRSIG	A 13 3 3600 (
+					20261010013253 20260910013253 46744 sinds.test.
+					rfaZAC/ksIznxs1u0bwbvWfjwOCKtOskU9sT
+					/z7drZGW72eUMpwn+fcFdTeBud2vUm1M8LYY
+					vrlemxAaqpf4vg== )
+			3600	NSEC	www.sinds.test. A RRSIG NSEC
+			3600	RRSIG	NSEC 13 3 3600 (
+					20261010013253 20260910013253 46744 sinds.test.
+					pfXwj4fALknmuyFSKyFQqm9sjCBkQ/hk4hHH
+					VNnTRUHLgfjuo4KldTsZhPLlSEcGbHKUlPgY
+					NSUIUzY717cvgw== )
+www.sinds.test.		3600	IN A	172.30.0.70
+			3600	RRSIG	A 13 3 3600 (
+					20261010013253 20260910013253 46744 sinds.test.
+					3l4jt3+2ZwWwxa9uJXsfN6NEaOjSVDMniFSu
+					2KiAQ7jdm12b/tNkt3wOK8QCD1IQZLyIyOoF
+					vdSrm2mPNy/D2Q== )
+			3600	NSEC	sinds.test. A RRSIG NSEC
+			3600	RRSIG	NSEC 13 3 3600 (
+					20261010013253 20260910013253 46744 sinds.test.
+					yQ/s3eNVKN0cC7+Yb1i0iFwI1h1gZUdlCMp2
+					MLraUD7LWBymkmp/UEpV6B1jd3oNSbX3idRg
+					cEujSURNUmloaw== )

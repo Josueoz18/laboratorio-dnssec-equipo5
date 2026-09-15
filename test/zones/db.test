@@ -1,0 +1,27 @@
+$TTL 3600
+@   IN  SOA ns.test. admin.test. (
+        2026091002
+        3600
+        1800
+        604800
+        86400
+)
+
+    IN  NS  ns.test.
+
+ns  IN  A   172.30.0.70
+www IN  A   172.30.0.70
+
+sinds          IN NS ns.sinds.test.
+ns.sinds       IN A  172.30.0.70
+
+dsincorrecto   IN NS ns.dsincorrecto.test.
+ns.dsincorrecto IN A 172.30.0.70
+dsincorrecto   IN DS 32470 13 2 AAFAF4182B0A42FDD5BB0E3499FD32A2FE081AD4102B0110E33302A56B968308
+
+expirada       IN NS ns.expirada.test.
+ns.expirada    IN A  172.30.0.70
+expirada       IN DS 7570 13 2 87C2DA01A54859B49BA98C78440AA27804408B18CACD6D8BD74B3D0DC69DD83C
+
+$INCLUDE "Ktest.+013+02248.key"
+$INCLUDE "Ktest.+013+45201.key"

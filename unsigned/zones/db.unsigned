@@ -1,0 +1,36 @@
+$TTL 86400
+
+@ IN SOA ns.unsigned. admin.unsigned. (
+    2026090801
+    3600
+    900
+    604800
+    86400
+)
+
+@            IN NS ns.unsigned.
+ns.unsigned. IN A 172.30.0.20
+
+; =========================
+; DELEGACION ALPHA
+; =========================
+alpha           IN NS ns.alpha
+ns.alpha        IN A 172.30.0.30
+
+; =========================
+; DELEGACION DELTA
+; =========================
+delta           IN NS ns.delta
+ns.delta        IN A 172.30.0.31
+
+; =========================
+; DELEGACION EPSILON
+; =========================
+epsilon         IN NS ns.epsilon
+ns.epsilon      IN A 172.30.0.32
+
+; =========================
+; DELEGACION ZETA
+; =========================
+zeta            IN NS ns.zeta
+ns.zeta         IN A 172.30.0.33

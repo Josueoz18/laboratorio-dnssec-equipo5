@@ -1,0 +1,13 @@
+$TTL 86400
+
+@ IN SOA ns.zeta.unsigned. admin.zeta.unsigned. (
+    2026090801
+    3600
+    900
+    604800
+    86400
+)
+
+@                 IN NS ns.zeta.unsigned.
+ns.zeta.unsigned. IN A 172.30.0.33
+www               IN A 172.30.0.33

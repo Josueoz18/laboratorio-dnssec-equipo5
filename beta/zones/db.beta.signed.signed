@@ -1,0 +1,70 @@
+; File written on Tue Sep  8 13:11:56 2026
+; dnssec-signzone version 9.20.27-1-Debian
+beta.signed.		86400	IN SOA	ns.beta.signed. admin.beta.signed. (
+					2026090801 ; serial
+					3600       ; refresh (1 hour)
+					900        ; retry (15 minutes)
+					604800     ; expire (1 week)
+					86400      ; minimum (1 day)
+					)
+			86400	RRSIG	SOA 13 2 86400 (
+					20261008181156 20260908181156 64161 beta.signed.
+					ue0Hu8fUSkB+yvsg4ph5AtuIgVtbKLeGt1wK
+					3chXS077Ip7AqCvd5EE2mU+3KBCk312S3kcQ
+					LUvWBC/rm6gSRA== )
+			86400	NS	ns.beta.signed.
+			86400	RRSIG	NS 13 2 86400 (
+					20261008181156 20260908181156 64161 beta.signed.
+					8yUgcRaUavVy28Msuu7bXw/p5qvO6tEe9ohl
+					3fLwCwC2RqJmltBoAqR+aiNJnKUWAhYOo7ah
+					ua160nGi6p6TWQ== )
+			86400	NSEC	ns.beta.signed. NS SOA RRSIG NSEC DNSKEY
+			86400	RRSIG	NSEC 13 2 86400 (
+					20261008181156 20260908181156 64161 beta.signed.
+					y1cSRJUAwii93hN9otu0qbqqaWMhEhqaii8J
+					qAwDwoOPnLmxJeZnSQHhLEiYa+5V9NsU0+dM
+					Bzs0J9OXzVPELw== )
+			86400	DNSKEY	256 3 13 (
+					5LMqxRpsnHxF53dTcS3yi6fNJ+r4AGOXiTad
+					1YBKqU1JENWlghAsk4LD4pPoJaIstacrLprr
+					PxfRPg4wLuwNEw==
+					) ; ZSK; alg = ECDSAP256SHA256 ; key id = 64161
+			86400	DNSKEY	257 3 13 (
+					+2Jq5454/cOzjZR4OvGu4LQQAbce1AJLL7Md
+					2pQJdEDfoM7fnR01SEomG6EGxcJB/HXQ0H9y
+					pOhcQb2K4F154g==
+					) ; KSK; alg = ECDSAP256SHA256 ; key id = 27278
+			86400	RRSIG	DNSKEY 13 2 86400 (
+					20261008181156 20260908181156 27278 beta.signed.
+					orctedJxlIE3d3fuj/Qn8GbdRlOrn3fWz0xu
+					48ceqfesbNa7koDtIKyVilxgXSioj2r2oXZw
+					etNdPdRa2tiViQ== )
+			86400	RRSIG	DNSKEY 13 2 86400 (
+					20261008181156 20260908181156 64161 beta.signed.
+					PLUdu0QKXG1VBRqoogsT6oxakbF0l9ou6jWm
+					4VNWBRbpQVPELpkehz8IAzOmUFBkUL0Af39a
+					ASk62P2WnPL1mA== )
+ns.beta.signed.		86400	IN A	172.30.0.50
+			86400	RRSIG	A 13 3 86400 (
+					20261008181156 20260908181156 64161 beta.signed.
+					O6bnbxjN9Wd454Uqqmh9X83cBwY/TZkRWTK6
+					GJ4f0AtmE74maGjhaicDcnEXphBv/zn2rHNl
+					fgY5Y1qWcxpuoA== )
+			86400	NSEC	www.beta.signed. A RRSIG NSEC
+			86400	RRSIG	NSEC 13 3 86400 (
+					20261008181156 20260908181156 64161 beta.signed.
+					JrbCLJTzE+CuiguwBgV3iDIR+uXnBi/HGzBJ
+					t2H0WSkeV4BIGsJPjgBDI1l8IZwt9tvZAhpj
+					ZSNdd3L+hc0QxA== )
+www.beta.signed.	86400	IN A	172.30.0.50
+			86400	RRSIG	A 13 3 86400 (
+					20261008181156 20260908181156 64161 beta.signed.
+					OsZ+Bp2To4tg5Xn9eKUABTjufwsb0yA+QLKM
+					/tkqXgQ+vmlqGBqSZobgUu7IQSWSO7Qp6ehe
+					wRkBu1VBjZv43w== )
+			86400	NSEC	beta.signed. A RRSIG NSEC
+			86400	RRSIG	NSEC 13 3 86400 (
+					20261008181156 20260908181156 64161 beta.signed.
+					iFx/BNdWGOSJ0UYGvjnaDL51bvC1HHnmpSfl
+					Oo0bJL4C6fqVq8pwpRjafa6USGMQQiRXwU2c
+					XSe/pqJYV0HAxA== )

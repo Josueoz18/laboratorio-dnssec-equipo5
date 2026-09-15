@@ -1,0 +1,157 @@
+services:
+  root:
+    image: ubuntu/bind9:latest
+    container_name: root
+    networks:
+      dnssec-net:
+        ipv4_address: 172.30.0.10
+    volumes:
+      - ./root/named.conf:/etc/bind/named.conf:ro
+      - ./root/zones/db.root.signed:/var/lib/bind/db.root.signed:ro
+
+  unsigned:
+    image: ubuntu/bind9:latest
+    container_name: unsigned
+    networks:
+      dnssec-net:
+        ipv4_address: 172.30.0.20
+    volumes:
+      - ./unsigned/named.conf:/etc/bind/named.conf:ro
+      - ./unsigned/zones/db.unsigned:/var/lib/bind/db.unsigned:ro
+ 
+  signed:
+    image: ubuntu/bind9:latest
+    container_name: signed
+    networks:
+      dnssec-net:
+        ipv4_address: 172.30.0.40
+    volumes:
+      - ./signed/named.conf:/etc/bind/named.conf:ro
+      - ./signed/zones/db.signed.signed:/var/lib/bind/db.signed.signed:ro
+
+  alpha:
+    image: ubuntu/bind9:latest
+    container_name: alpha
+    networks:
+      dnssec-net:
+        ipv4_address: 172.30.0.30
+    volumes:
+      - ./alpha/named.conf:/etc/bind/named.conf:ro
+      - ./alpha/zones/db.alpha.unsigned:/var/lib/bind/db.alpha.unsigned:ro
+
+  recursive1:
+    image: ubuntu/bind9:latest
+    container_name: recursive1
+    networks:
+      dnssec-net:
+        ipv4_address: 172.30.0.100
+    volumes:
+      - ./recursive1/named.conf:/etc/bind/named.conf:ro
+      - ./recursive1/zones/db.root.hints:/var/lib/bind/db.root.hints:ro
+
+  recursive2:
+    image: ubuntu/bind9:latest
+    container_name: recursive2
+    networks:
+      dnssec-net:
+        ipv4_address: 172.30.0.101
+    volumes:
+      - ./recursive2/named.conf:/etc/bind/named.conf:ro
+      - ./recursive2/zones/db.root.hints:/var/lib/bind/db.root.hints:ro
+
+  beta:
+    image: ubuntu/bind9:latest
+    container_name: beta
+    networks:
+      dnssec-net:
+        ipv4_address: 172.30.0.50
+    volumes:
+      - ./beta/named.conf:/etc/bind/named.conf:ro
+      - ./beta/zones/db.beta.signed.signed:/var/lib/bind/db.beta.signed.signed:ro
+
+  gamma:
+    image: ubuntu/bind9:latest
+    container_name: gamma
+    networks:
+      dnssec-net:
+        ipv4_address: 172.30.0.60
+    volumes:
+      - ./gamma/named.conf:/etc/bind/named.conf:ro
+      - ./gamma/zones/db.gamma.signed:/var/lib/bind/db.gamma.signed:ro
+
+  test:
+    image: ubuntu/bind9:latest
+    container_name: test
+    networks:
+      dnssec-net:
+        ipv4_address: 172.30.0.70
+    volumes:
+      - ./test/named.conf:/etc/bind/named.conf:ro
+      - ./test/zones/db.test.signed:/var/lib/bind/db.test.signed:ro
+      - ./test/zones/db.sinds.test.signed:/var/lib/bind/db.sinds.test.signed:ro
+      - ./test/zones/db.dsincorrecto.test.signed:/var/lib/bind/db.dsincorrecto.test.signed:ro
+      - ./test/zones/db.expirada.test.signed:/var/lib/bind/db.expirada.test.signed:ro
+
+  delta:
+    image: ubuntu/bind9:latest
+    container_name: delta
+    networks:
+      dnssec-net:
+        ipv4_address: 172.30.0.31
+    volumes:
+      - ./delta/named.conf:/etc/bind/named.conf:ro
+      - ./delta/zones/db.delta.unsigned:/var/lib/bind/db.delta.unsigned:ro
+
+  epsilon:
+    image: ubuntu/bind9:latest
+    container_name: epsilon
+    networks:
+      dnssec-net:
+        ipv4_address: 172.30.0.32
+    volumes:
+      - ./epsilon/named.conf:/etc/bind/named.conf:ro
+      - ./epsilon/zones/db.epsilon.unsigned:/var/lib/bind/db.epsilon.unsigned:ro
+
+  zeta:
+    image: ubuntu/bind9:latest
+    container_name: zeta
+    networks:
+      dnssec-net:
+        ipv4_address: 172.30.0.33
+    volumes:
+      - ./zeta/named.conf:/etc/bind/named.conf:ro
+      - ./zeta/zones/db.zeta.unsigned:/var/lib/bind/db.zeta.unsigned:ro
+
+  eta:
+    image: ubuntu/bind9:latest
+    container_name: eta
+    networks:
+      dnssec-net:
+        ipv4_address: 172.30.0.51
+    volumes:
+      - ./eta/named.conf:/etc/bind/named.conf:ro
+      - ./eta/zones/db.eta.signed.signed:/var/lib/bind/db.eta.signed.signed:ro
+
+  theta:
+    image: ubuntu/bind9:latest
+    container_name: theta
+    networks:
+      dnssec-net:
+        ipv4_address: 172.30.0.52
+    volumes:
+      - ./theta/named.conf:/etc/bind/named.conf:ro
+      - ./theta/zones/db.theta.signed.signed:/var/lib/bind/db.theta.signed.signed:ro
+
+  iota:
+    image: ubuntu/bind9:latest
+    container_name: iota
+    networks:
+      dnssec-net:
+        ipv4_address: 172.30.0.53
+    volumes:
+      - ./iota/named.conf:/etc/bind/named.conf:ro
+      - ./iota/zones/db.iota.signed:/var/lib/bind/db.iota.signed:ro
+
+networks:
+  dnssec-net:
+    external: true
